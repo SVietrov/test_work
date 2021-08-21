@@ -42,7 +42,7 @@ calculate.addEventListener('click', function () {
             console.log("inc: " + inc);
             inc += 2;
         }
-        if (((smallPackage * 6) + (bigPackage * 8) - items) == 3) {
+        if ((((smallPackage * 6) + (bigPackage * 8) - items) == 3) && bigPackage != 0) {
           bigPackage -= 1;
           smallPackage +=1; 
         }
@@ -56,8 +56,9 @@ calculate.addEventListener('click', function () {
     document.getElementById('total').textContent = items;
     document.getElementById('total-calc').textContent = ((smallPackage * 6) + (bigPackage * 8));
     document.getElementById('remainder').textContent = remainder;
-    // console.log("big package: " + bigPackage);
-    // console.log("small package: " + smallPackage);
-    // console.log("nado: " + items);
-    // console.log("Ostatok: " + remainder);
+    console.log(items);
+    console.log("big package: " + bigPackage);
+    console.log("small package: " + smallPackage);
+    console.log("nado: " + items);
+    console.log("Ostatok: " + remainder);
 });
