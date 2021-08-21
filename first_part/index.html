@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Тестовое задание</title>
+</head>
+
+<body>
+    <div class="background-block">
+        <div class="modal-container">
+            <p class="title-page">Login To Your Account / Register New</p>
+            <div class="modal-header">
+                <div class="modal-title-icon">
+                    <img src="images/pen.png" alt="pen-icon" />
+                </div>
+                <div class="modal-title">Login To Your Account / Register New</div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-col">
+                    <div class="modal-decoration">
+                        <div class="modal-decoration-line"></div>
+                        <div class="modal-decoration-circle">
+                            /
+                        </div>
+                    </div>
+                    <form class="modal-login-form" name="loginForm" onsubmit="return loginValidation()">
+                        <div class="modal-input modal-input modal-login-input">
+                            <span class="input-validation-status valid"><img src="images/valid.svg"
+                                    alt="valid status"></span>
+                            <span class="input-validation-status invalid"><img src="images/invalid.svg"
+                                    alt="invalid-status"></span>
+                            <input type="text" placeholder="User Name" id="login-name" data-maxlength="20"
+                                data-minlength="3" name="loginName" />
+                            <label for="register-email" class="modal-register-error"></label>
+                        </div>
+                        <div class="modal-input modal-input modal-login-input">
+                            <span class="input-validation-status valid"><img src="images/valid.svg"
+                                    alt="valid status"></span>
+                            <span class="input-validation-status invalid"><img src="images/invalid.svg"
+                                    alt="invalid-status"></span>
+                            <input type="password" placeholder="Password" id="login-password" data-maxlength="20"
+                                data-minlength="6" name="loginPassword" />
+                            <label for="register-email" class="modal-register-error"></label>
+                        </div>
+                        <div class="modal-login-submit">
+                            <label id="tooltip-remember" class="modal-login-checkbox">Remember My password
+                                <input type="checkbox">
+                                <span class="modal-login-checkmark"></span>
+                            </label>
+                            <div class="modal-tooltip" id="rememberPassword">You no longer need to enter<br> a password
+                                every time you use the site</div>
+                            <input class="btn btn-login" type="submit" value="Login" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-col">
+                    <p class="modal-register-title">Register</p>
+                    <form class="modal-register-form" name="registerForm" onsubmit="return registrationValidation()">
+                        <div class="modal-input modal-register-input">
+                            <label for="register-email" class="modal-register-label">Email</label>
+                            <span class="input-validation-status valid"><img src="images/valid.svg"
+                                    alt="valid status"></span>
+                            <span class="input-validation-status invalid"><img src="images/invalid.svg"
+                                    alt="invalid-status"></span>
+                            <input type="text" id="register-email" name="registerEmail" data-maxlength="20"
+                                data-minlength="4" />
+                            <label for="register-email" class="modal-register-error"></label>
+                        </div>
+                        <div class="modal-input modal-register-input">
+                            <label for="register-name" class="modal-register-label">User Name</label>
+                            <span class="input-validation-status valid"><img src="images/valid.svg"
+                                    alt="valid status"></span>
+                            <span class="input-validation-status invalid"><img src="images/invalid.svg"
+                                    alt="invalid-status"></span>
+                            <input type="text" id="register-name" name="registerName" data-maxlength="20"
+                                data-minlength="3" />
+                            <label for="register-email" class="modal-register-error"></label>
+                        </div>
+                        <div class="modal-input modal-register-input">
+                            <label for="register-password" class="modal-register-label">Password</label>
+                            <span class="input-validation-status valid"><img src="images/valid.svg"
+                                    alt="valid status"></span>
+                            <span class="input-validation-status invalid"><img src="images/invalid.svg"
+                                    alt="invalid-status"></span>
+                            <input type="password" id="register-password" name="registerPassword" data-maxlength="20"
+                                data-minlength="6" />
+                            <label for="register-email" class="modal-register-error"></label>
+                        </div>
+                        <input class="btn btn-register" type="submit" value="Register" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Подключаем скрипты в конце страницы для ускорения её загрузки. -->
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
